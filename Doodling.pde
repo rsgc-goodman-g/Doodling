@@ -14,7 +14,7 @@ void draw() {
   fill(0);
 
   // draw the circle
-  ellipse(x, y, 5, 5);
+  line(x, y, 200, 200);
 
   // change position
   x = x + random(-5, 5);
