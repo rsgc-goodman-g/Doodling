@@ -11,7 +11,7 @@ void setup() {
 void draw() {
 
   // black fill
-  fill(0);
+  stroke( random(255) );
 
   // draw the circle
   line(x, y, 200, 200);
@@ -19,4 +19,11 @@ void draw() {
   // change position
   x = x + random(-5, 5);
   y = y + random(-5, 5);
+}
+
+// capture a screenshot
+void keyPressed() {
+  
+  saveFrame("output-########.png");
+  
 }
