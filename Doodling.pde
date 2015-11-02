@@ -24,6 +24,14 @@ void draw() {
   x = x + random(-5, 5);
   y = y + random(-5, 5);
 
+  // stop at edges
+  if (x < 0) {
+    x = 200;
+  }
+  if (y > 400) {
+    y = 200;
+  }
+
   // cycle through the hues
   hue = hue + 1;
 
