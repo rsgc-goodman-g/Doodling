@@ -1,6 +1,7 @@
 float x = 200;
 float y = 200;
 float hue = 0;
+float saturation = 0;
 
 void setup() {
   size(400, 400);
@@ -15,9 +16,9 @@ void setup() {
 void draw() {
 
   // black fill
-  stroke(hue, 80, 90);
+  stroke(hue, saturation, 90);
 
-  // draw the circle
+  // draw the line
   line(x, y, 200, 200);
 
   // change position
@@ -31,13 +32,27 @@ void draw() {
   if (y > 400) {
     y = 200;
   }
+  if (x > 400) {
+    x = 200;
+  }
+  if (y < 0) {
+    y = 200;
+  }
 
   // cycle through the hues
   hue = hue + 1;
 
+  // cycle through saturation
+  saturation = saturation + 1;
+
   // make sure that colour resets
   if (hue > 360) {
     hue = 0;
+  }
+
+  // make sure that saturation resets
+  if (saturation > 100) {
+    saturation = 0;
   }
 }
 
